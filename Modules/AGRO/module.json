@@ -1,0 +1,11 @@
+{
+    "name": "AGRO",
+    "alias": "agro",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\AGRO\\Providers\\AGROServiceProvider"
+    ],
+    "files": []
+}
