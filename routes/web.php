@@ -49,7 +49,7 @@ Route::get('/inventario', [App\Http\Controllers\HomeController::class, 'inventar
 
 
 
-Route::get('/calculator', [App\Http\Controllers\CalculatorController::class, 'index'])->middleware('can:admin.calculator')->name('admin.calculator');
+Route::get('/calculator', [App\Http\Controllers\CalculatorController::class, 'index'])->middleware('can:admin.caculator')->name('admin.calculator');
 
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
@@ -60,7 +60,7 @@ Route::get('/users/edit/{id}', [UserController::class, 'edit'])->name('admin.use
 
 Route::get('/apprentices', [App\Http\Controllers\ApprenticeController::class, 'index'])->name('admin.apprentices.index');
 Route::get('/apprentices/add', [App\Http\Controllers\ApprenticeController::class, 'getapprenticeadd'])->middleware('can:admin.apprentices.add')->name('admin.apprentice.add');
-Route::post('/apprentices/add', [App\Http\Controllers\ApprenticeController::class, 'postapprenticeadd'])->name('admin.apprentice.add');
+Route::post('/apprentices/add', [App\Http\Controllers\ApprenticeController::class, 'postapprenticeadd'])->name( 'admin.apprentice.add');
 Route::get('/apprentices/edit/{id}', [App\Http\Controllers\ApprenticeController::class, 'getapprenticeedit'])->middleware('can:admin.apprentice.edit')->name('admin.apprentice.edit');
 Route::post('/apprentices/edit/{id}', [App\Http\Controllers\ApprenticeController::class, 'postapprenticeedit'])->name('admin.apprentice.edit');
 Route::get('/apprentices/delete/{id}', [App\Http\Controllers\ApprenticeController::class, 'getapprenticedelete'])->middleware('can:admin.apprentice.delete')->name('admin.apprentice.delete');

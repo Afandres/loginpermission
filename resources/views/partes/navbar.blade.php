@@ -33,7 +33,7 @@
     </form>
     <a href="{{ route('logout') }}"
         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-        Cerrar sesión
+        <i class="fa-solid fa-right-from-bracket"></i>
     </a>
       </li>
     </ul>
